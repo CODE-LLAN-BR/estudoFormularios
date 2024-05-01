@@ -1,0 +1,112 @@
+<!-- GET = RECEBER e ENVIAR recursos(dados)
+    POST = Somente ENVIAR recursos(dados) -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+
+    <title></title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1>Crie e compartilhe seu evento.</h1>
+        <p>O primeiro passo, é preencher esse formulário de inscrição.</p>
+      </header>
+      <form id="my-form">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Informações do evento</legend>
+            <div class="input-wrapper">
+              <label for="event-title">Título do evento <span>(mínimo 8 caracteres)</span></label>
+              <input type="text"  id="event-title" required
+              minlength="8">
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-link">Link do evento <span>(comece com https://)</span></label>
+              <input type="url"  id="event-link" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="wpp">Whatsapp para contato <span>(somente números)</span></label>
+              <input type="number"  id="wpp" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="extra">Informações extras</label>
+              <textarea id="extra"></textarea>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-category">Categoria</span></label>
+              <select id="event-category">
+                <option value="live">Ao vivo</option>
+                <option value="podcast">Podcast</option>
+                <option value="mentership">Mentoria</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Privacidade</legend>
+            <div class="input-wrapper">
+              <label for="event-email">E-mail do administrador<span>(digite um email válido)</span></label>
+              <input type="email"  id="event-email" required>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="event-pass">Senha de acesso para os participantes<span>(mínimo 8 caracteres)</span></label>
+              <input type="password"  id="event-pass" required
+              minlength="8">
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox"  id="event-private">
+              <label for="event-private">Evento privado</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <legend>Dia e hora</legend>
+            <div class="threeCol">
+              <div class="input-wrapper">
+                <label for="event-data">Data</label>
+                <input type="date"  id="event-data">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-of">Das</label>
+                <input type="time"  id="event-begin">
+              </div>
+
+              <div class="input-wrapper">
+                <label for="event-until">Até</label>
+                <input type="time"  id="event-finish">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+        <footer>
+        <input type="submit" value="Salvar evento" 
+        form="my-form"
+        id="button">
+      </footer>
+    </div>
+  </body>
+</html>
